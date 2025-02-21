@@ -43,14 +43,14 @@ public class Vector2
     // Dot product
     public static float operator *(Vector2 a, Vector2 b)
     {
-        return a[0] * a[1] + b[0] * b[1];
+        return a[0] * b[0] + a[1] * b[1];
     }
 
     // Cross product
     // In case of 2D Vector, return value is a scalar representing the z-component
     public static float operator ^(Vector2 a, Vector2 b)
     {
-        return a[0] * b[1] + b[0] * a[1];
+        return a[0] * b[2] + b[0] * a[1];
     }
     
     // // Scalar multiplication
