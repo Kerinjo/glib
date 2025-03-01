@@ -27,5 +27,28 @@ class Program
         Console.WriteLine($"Vector before scaling: [{vec3ToScale[0]}, {vec3ToScale[1]}, {vec3ToScale[2]}]");
         Vector3 res3 = Transform.Scale(vec3ToScale, 0.5f, 0.5f, 0.5f);
         Console.WriteLine($"Vector after scaling : [{res3[0]}, {res3[1]}, {res3[2]}]");
+
+        
+        Console.WriteLine(res2);
+        Console.WriteLine(res3);
+        
+        
+        // Matrix2D
+        Matrix2D m1 = Matrix2D.Parse("[[12, 1], [13, -9]]");
+        Matrix2D m2 = Matrix2D.Parse("[[100, 14], [1, 4]]");
+
+        Console.WriteLine("Matrix mult:");
+        Console.WriteLine(m1 * m2);
+        Console.WriteLine($"Det: {m2.Det()}");
+
+        Console.WriteLine(Matrix2D.Transpose(m1));
+        
+        var A = new Matrix2D(1, 1, 1, 0);
+        var B = new Matrix2D(0.5f, 0, 0, 1.5f);
+
+        Console.WriteLine(A * 1.7f);
+        Console.WriteLine(A + B);
+
+        // next up vectors with matrices
     }
 }

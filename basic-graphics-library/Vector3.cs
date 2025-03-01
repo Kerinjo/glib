@@ -4,7 +4,7 @@ namespace basic_graphics_library;
 
 public class Vector3
 {
-    private float[] _coordinates;
+    private readonly float[] _coordinates;
 
     public Vector3(float x, float y, float z)
     {
@@ -68,4 +68,6 @@ public class Vector3
     {
         return new Vector3(a[0] / k, a[1] / k, a[2] / k);
     }
+    
+    public override string ToString() => $"[{this[0]}, {this[1]}, {this[2]}]";
 }
